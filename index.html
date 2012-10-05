@@ -1,0 +1,72 @@
+<?php
+/**
+ * HoverLineGrow
+ */
+?><!doctype html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="no"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="no"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="no"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html> <!--<![endif]-->
+<head>
+	<meta charset="utf8" />	
+    <!--
+                 
+	         .:::.     C           .C            
+	     o@@@8OOO8@@. c@o          O@.           
+	   C@8:           8@@c        C@@C           Hi there, curious stranger. 
+	  8@c            c@@@8.      c@@@@:          
+	 C@c             O8 :@O     .@@ c@O          Jørgen wanted underlines on links to grow. I tried fixing this with CSS3 first 
+	 O@.     cccccccccc  o@o    8@:  8@:         only to realize only Firefox supports animating pseudo-elements. Gah... 
+	 O@:    .CCCOCCCCO@O  O@c  O@o   c@O         
+	 :@8              o@C  @@.c@O     8@:        
+	  :@8c           C@8.  :@@@8      c@O        
+	    o@@Oc....co8@8c     c@@.       8@:       
+	       cCO888Oo:         Oc        :Oc       good-morning.no
+	                                       
+    --> 
+
+
+    <title>HoverLineGrow</title>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	<script src="js/hoverLineGrow.jquery.js"></script>
+
+	<!--
+		<style>
+			.menu-top-item-line {
+				position:absolute;
+				z-index:1;
+				top:17px;
+			}
+		</style>
+	-->
+	<script>
+		$(function() {
+		    $(".menu-top-item").hoverLineGrow({
+		    	variant: "left-to-right",
+		    	easeOver: "easeOutQuad",
+		    	durationOver: 100,
+		    	easeOut: "easeOutQuad",
+		    	lineStyle: "1px solid",
+		    	/* lineDistance: 1 */
+		    	lineTop: 17
+		    });
+		});
+	</script>
+
+</head>
+<body>
+
+	<p>The purpose of this plugin is to:</p>
+	<ul>
+		<li>Satisfy Jørgens need for <a href="#" class="menu-top-item">fancy underlines</a></li>
+		<li>Satisfy Jørgens need for <a href="#" class="menu-top-item">high end web</a></li>
+		<li>Satisfy Jørgens need for <a href="#" class="menu-top-item">expression</a></li>
+		<li>Satisfy Jørgens need for <a href="#" class="menu-top-item">fwas</a></li>
+		<li>Satisfy Jørgens need for <a href="#" class="menu-top-item">gull i gulltaggen</a></li>
+		<li>Satisfy Jørgens need for <a href="#" class="menu-top-item">creative<br>fidelity</a></li>
+	</ul>
+
+</body>
+</html>
