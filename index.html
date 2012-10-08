@@ -16,7 +16,7 @@
 	   C@8:           8@@c        C@@C           Hi there, curious stranger. 
 	  8@c            c@@@8.      c@@@@:          
 	 C@c             O8 :@O     .@@ c@O          Jørgen wanted underlines on links to grow. I tried fixing this with CSS3 first 
-	 O@.     cccccccccc  o@o    8@:  8@:         only to realize only Firefox supports animating pseudo-elements. Gah... 
+	 O@.     cccccccccc  o@o    8@:  8@:         only to realize only Firefox supports animating pseudo-elements...
 	 O@:    .CCCOCCCCO@O  O@c  O@o   c@O         
 	 :@8              o@C  @@.c@O     8@:        
 	  :@8c           C@8.  :@@@8      c@O        
@@ -28,22 +28,21 @@
 
     <title>HoverLineGrow</title>
 	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 	<script src="js/jquery.easing.js"></script>
+
 	<script src="js/hoverLineGrow.jquery.js"></script>
 
-	<!--
-		<style>
-			.menu-top-item-line {
-				position:absolute;
-				z-index:1;
-				top:17px;
-			}
-		</style>
-	-->
+	<style>
+		a {
+			text-decoration:none;
+		}
+	</style>
 	<script>
 		$(function() {
-		    $(".menu-top-item").hoverLineGrow({
+
+			// apply hoverLineGrow to all a tags
+		    $("a").hoverLineGrow({
 		    	variant: "left-to-right",
 		    	easeOver: "easeOutQuad",
 		    	durationOver: 100,
@@ -60,12 +59,12 @@
 
 	<p>The purpose of this plugin is to:</p>
 	<ul>
-		<li>Satisfy Jørgens need for <a href="#" class="menu-top-item">fancy underlines</a></li>
-		<li>Satisfy Jørgens need for <a href="#" class="menu-top-item">high end web</a></li>
-		<li>Satisfy Jørgens need for <a href="#" class="menu-top-item">expression</a></li>
-		<li>Satisfy Jørgens need for <a href="#" class="menu-top-item">fwas</a></li>
-		<li>Satisfy Jørgens need for <a href="#" class="menu-top-item">gull i gulltaggen</a></li>
-		<li>Satisfy Jørgens need for <a href="#" class="menu-top-item">creative<br>fidelity</a></li>
+		<li>Satisfy Jørgens need for <a href="#">fancy underlines</a></li>
+		<li>Satisfy Jørgens need for <a href="#">high end web</a></li>
+		<li>Satisfy Jørgens need for <a href="#">artistic expression</a></li>
+		<li>Satisfy Jørgens need for <a href="#">FWAs</a></li>
+		<li>Satisfy Jørgens need for <a href="#">gull i gulltaggen</a></li>
+		<li>(though it doesn't work with <a href="#">line<br>breaks</a>)</li>
 	</ul>
 
 </body>
