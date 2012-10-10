@@ -1,6 +1,7 @@
 <?php
 /**
  * HoverLineGrow
+ * Simon Pedersen @ good-morning.no
  */
 ?><!doctype html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="no"> <![endif]-->
@@ -9,22 +10,6 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html> <!--<![endif]-->
 <head>
 	<meta charset="utf8" />	
-    <!--
-                 
-	         .:::.     C           .C            
-	     o@@@8OOO8@@. c@o          O@.           
-	   C@8:           8@@c        C@@C           Hi there, curious stranger. 
-	  8@c            c@@@8.      c@@@@:          
-	 C@c             O8 :@O     .@@ c@O          Jørgen wanted underlines on links to grow. I tried fixing this with CSS3 first 
-	 O@.     cccccccccc  o@o    8@:  8@:         only to realize only Firefox supports animating pseudo-elements...
-	 O@:    .CCCOCCCCO@O  O@c  O@o   c@O         
-	 :@8              o@C  @@.c@O     8@:        
-	  :@8c           C@8.  :@@@8      c@O        
-	    o@@Oc....co8@8c     c@@.       8@:       
-	       cCO888Oo:         Oc        :Oc       good-morning.no
-	                                       
-    --> 
-
 
     <title>HoverLineGrow</title>
 	
@@ -47,10 +32,11 @@
 		    	easeOver: "easeOutQuad",
 		    	durationOver: 100,
 		    	easeOut: "easeOutQuad",
-		    	lineStyle: "1px solid",
-		    	/* lineDistance: 1 */
-		    	lineTop: 17
+		    	style: "1px solid",
+		    	/* padding: 1, */
+		    	top: 17
 		    });
+
 		});
 	</script>
 

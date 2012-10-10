@@ -21,8 +21,8 @@ $(function() {
     	easeOver: "easeOutQuad",
     	durationOver: 100,
     	easeOut: "easeOutQuad",
-    	lineStyle: "1px solid",
-    	lineDistance: 1
+    	style: "1px solid",
+    	padding: 1
     });
 });
 
@@ -33,7 +33,7 @@ $(".set-grid-equal .label").data("hoverLineGrow").out(true, true);
 (function($){
     $.hoverLineGrow = function(el, options){
 
-        // To avoid scope issues, use 'base' instead of 'this'
+        // To avoid scope issues, using 'base' instead of 'this'
         // to reference this class from internal events and functions.
         var base = this;
         
@@ -47,8 +47,6 @@ $(".set-grid-equal .label").data("hoverLineGrow").out(true, true);
         base.init = function(){
             base.options = $.extend({},$.hoverLineGrow.defaultOptions, options);
             
-            // Put your initialization code here
-
             // get instance of element
 			$t = base.$el;
 
@@ -56,24 +54,19 @@ $(".set-grid-equal .label").data("hoverLineGrow").out(true, true);
             $t.css({
             	textDecoration:"none",
             	position:"relative"
-	            /*
-            	,display:"inline-block",
-            	overflow:"hidden",
-            	verticalAlign:"bottom"
-	            */
             });
 
             // create span that should be animated
             $line = $("<span class='line'></span>");
             
             // calculate paddingTop for line
-            var distance = $t.height()+base.options.lineDistance;
-            if (base.options.lineTop > 0) distance = base.options.lineTop;
+            var distance = $t.height()+base.options.padding;
+            if (base.options.top > 0) distance = base.options.top;
 
             $line.css({
             	position:"absolute",
             	zIndex:1,
-            	borderBottom:base.options.lineStyle,
+            	borderBottom:base.options.style,
             	left:0,
             	paddingTop:distance
             })
@@ -170,9 +163,9 @@ $(".set-grid-equal .label").data("hoverLineGrow").out(true, true);
         easeOver: "linear",
         durationOut: 300,
         easeOut: "linear",
-        lineStyle: "1px solid red",
-        lineDistance: 3,
-        lineTop:0,
+        style: "1px solid red",
+        padding: 3,
+        top:0,
         activeClass: "active" // if parent element has this class, it's active and we don't want trigger hover
     };
     
