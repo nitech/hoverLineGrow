@@ -43,7 +43,7 @@ $("a").hoverLineGrow({
 	// In this example, I position the line 17 px from the top of the text.
 	top: 17
 });
-´´´
+```
 
 Comments, questions, suggestions?
 ----------------------------------------
