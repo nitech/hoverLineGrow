@@ -1,5 +1,5 @@
-hoverLineGrow - a jQuery plugin that satisfies Jørgen Winsnes' need for fancy underlines
-========================================================================================
+hoverLineGrow - gives you fancy underlines
+==========================================
 
 A what now?
 --------------------------------------
